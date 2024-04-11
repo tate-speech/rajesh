@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Password Protect Test</title>
+	<style>
+		.text{
+			width: 210px;
+			height: 50px;
+			font-weight: bold;
+			font-size: 13.5px;
+		}
+		.but{
+			width: 210px;
+			height: 50px;
+			font-weight: bold;
+			font-size: 13.5px;
+			cursor: pointer;
+		}
+		.head{
+			font-family: sans-serif;
+		}
+			   @media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+}
+@media (max-width: 576px) {
+  /* Styles for screens smaller than 576px */
+}	
+	</style>
+	<script>
+		function checkPass(){
+			let password = document.getElementById("pass").value
+
+			if(password == "rajesh"){
+				alert("Correct Password")
+				window.open('main.html')
+			}else if(password == ""){
+			    alert('you didnt even type the password')
+			    return false;
+			}else{
+				alert('Server access denied. Reason: incorrect Password')
+			}
+		}
+	</script>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+		<h1 class="head">Type The Password</h1>
+	</center>
+	<br>
+	<br>
+	<br>
+	<center>
+	<input type="Password" class="text" placeholder="Type the Password Give By Dhyan" id="pass">
+	</center>
+	<br>
+	<center>
+	<input type="button" class="but" onclick="checkPass()" value="Enter">
+    </center>
+</body>
+</html>
